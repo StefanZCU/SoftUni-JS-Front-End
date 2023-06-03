@@ -1,0 +1,33 @@
+html{
+    font-family: Helvetica, sans-serif;
+}
+
+body{
+    margin: 50px;
+}
+
+hr{
+    border: 1px solid rgb(148, 130, 130);
+}
+
+header, h1, nav{
+    display: inline-block;
+}
+
+main h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+li{
+    display: inline-block;
+}
+
+a{
+    color: green;
+    text-decoration: none;
+    margin: 10px;
+}
+
+nav{
+    margin-left: 50px;
+}
