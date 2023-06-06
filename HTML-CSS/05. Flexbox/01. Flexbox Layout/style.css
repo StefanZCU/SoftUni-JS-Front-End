@@ -1,0 +1,36 @@
+body{
+    background: #EEE;
+    padding: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header, main, aside, footer{
+    padding: 2rem;
+    margin: 10px;
+    background-color: #FFF;
+    box-shadow: 0 0 5px 2px #c2c2c2;
+    border-radius: 0.4rem;
+    color: #000;
+
+}
+
+header, footer{
+    flex-basis: 100%;
+}
+
+main, aside{
+    height: 16rem
+}
+
+header{
+    height: 4rem;
+}
+
+main{
+    flex: 8 1 40rem;
+}
+
+aside{
+    flex: 2 1 20rem;
+}
