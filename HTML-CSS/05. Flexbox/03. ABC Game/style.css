@@ -1,0 +1,37 @@
+html{
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+div{
+    display: flex;
+    align-items: center;
+    max-width: 15vw;
+    height: 35rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+span{
+    border: 1px solid black;
+    padding: 1.1em 0;
+    margin: 4px;
+    box-sizing: border-box;
+    width: 6em;
+    height: 3.5em;
+    text-align: center;
+}
+
+span#S {order: 1}
+span#e {order: 2}
+span#m {order: 3}
+span#a {order: 4}
+span#n {order: 5}
+span#t {order: 6}
+span#i {order: 7}
+span#c {order: 8}
+span#H {order: 9}
+span#T {order: 10}
+span#M {order: 11}
+span#L {order: 12}
+
