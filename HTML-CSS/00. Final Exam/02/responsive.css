@@ -1,0 +1,44 @@
+@media (max-width: 600px){
+    .home-hero{
+        flex-direction: column-reverse;
+    }
+    .home-hero-text-container{
+        margin-left: 0px;
+        width: 99%;
+    }
+
+    .home-image1{
+        width: 99%;
+    }
+
+    .home-cta-btn,
+    .home-cta-btn2{
+        padding: 14px 20px;
+    }
+
+    .home-cta-btn2{
+        align-self: center;
+    }
+
+    .home-cards-container{
+        flex-direction: column;
+    }
+
+    .home-heading-container,
+    .home-feature-card,
+    .home-feature-card1,
+    .home-feature-card2{
+        width: 99%;
+    }
+
+    .home-image2,
+    .home-image3,
+    .home-image4{
+        width: 80%;
+    }
+
+    .home-stats{
+        grid-template-columns: 1fr;
+        margin-top: 950px;
+    }
+}
