@@ -17,5 +17,3 @@ function solve(num){
     console.log(test_same_digit(num))
     console.log(sum)
 }
-
-solve(11111111)
