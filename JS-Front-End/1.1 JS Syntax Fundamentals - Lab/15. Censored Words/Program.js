@@ -11,5 +11,3 @@ function solve (text, word){
         return star.repeat(word.length);
     }
 }
-
-solve('A small sentence with some words', 'small')
