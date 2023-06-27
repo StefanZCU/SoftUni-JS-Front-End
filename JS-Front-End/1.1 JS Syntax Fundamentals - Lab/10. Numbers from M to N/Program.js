@@ -3,5 +3,3 @@ function solve(num1, num2){
         console.log(i);
     }
 }
-
-solve(6, 2);
