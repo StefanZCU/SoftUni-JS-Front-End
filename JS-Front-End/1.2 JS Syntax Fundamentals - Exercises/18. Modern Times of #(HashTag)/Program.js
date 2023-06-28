@@ -23,5 +23,3 @@ function solve(sentence){
         foundWord = false;
     }
 }
-
-solve('Nowadays everyone uses # to tag a #special word in #socialMedia')
