@@ -1,5 +1,5 @@
 function solve(numArray, numRotations){
-    for(i = 0; i < numRotations; i++){
+    for(let i = 0; i < numRotations; i++){
         numArray.push(numArray[0]);
         numArray = numArray.slice(1);
     }
