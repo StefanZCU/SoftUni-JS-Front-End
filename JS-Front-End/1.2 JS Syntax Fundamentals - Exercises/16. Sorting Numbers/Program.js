@@ -4,7 +4,7 @@ function solve(arr){
     const originalArraySize = arr.length;
     let newArray = [];
 
-    for(let i = 0; i < Math.floor(originalArraySize / 2); i++){
+    for(let i = 0; i < originalArraySize / 2; i++){
         newArray.push(sortedArr.shift());
         newArray.push(sortedArr.pop());
     }
