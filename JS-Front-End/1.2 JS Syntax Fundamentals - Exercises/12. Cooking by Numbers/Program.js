@@ -10,7 +10,7 @@ function solve(num, cmd1, cmd2, cmd3, cmd4, cmd5){
             case "dice": newNum = Math.sqrt(newNum); break;
             case "spice": newNum++; break;
             case "bake": newNum *= 3; break;
-            case "fillet": newNum -= newNum * 0.2;
+            case "fillet": newNum -= newNum * 0.2; break;
         }
 
         console.log(newNum);
