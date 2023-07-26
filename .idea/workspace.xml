@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f109209-4bb3-4fb0-9659-3fa7deee932a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/JS-Front-End/0.1 Final Exam - Prep/8 Apr 2023/01. Sprint Review/Program.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JS-Front-End/0.1 Final Exam - Prep/8 Apr 2023/02. Sprint Planning/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JS-Front-End/0.1 Final Exam - Prep/8 Apr 2023/02. Sprint Planning/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="4f109209-4bb3-4fb0-9659-3fa7deee932a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,7 +69,7 @@
       <updated>1690289958238</updated>
       <workItem from="1690289960088" duration="12000" />
       <workItem from="1690317294012" duration="42000" />
-      <workItem from="1690355004442" duration="4780000" />
+      <workItem from="1690355004442" duration="5040000" />
     </task>
     <servers />
   </component>
