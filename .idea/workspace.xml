@@ -5,7 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f109209-4bb3-4fb0-9659-3fa7deee932a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/01. Subtraction/01. Substraction.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/01. Subtraction/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/01. Subtraction/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/01. Subtraction/subtract.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/02. Sections/02. Sections.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/02. Sections/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/02. Sections/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/02. Sections/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/03. Accordion/03. Accordion.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/03. Accordion/accordion.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/03. Accordion/accordion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/03. Accordion/accordion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/04. Locked-Profile/04. Locked Profile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/04. Locked-Profile/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/04. Locked-Profile/template.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/04. Locked-Profile/template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/05. Fill-Dropdown/05. Fill-Dropdown.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/05. Fill-Dropdown/dropdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/05. Fill-Dropdown/filldropdown.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/05. Fill-Dropdown/filldropdown.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/06. Table - Search Engine/solution.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/06. Table - Search Engine/template.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/06. Table - Search Engine/template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/07. Format the Text/softuni-wallpaper-5-1920x1080.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/07. Format the Text/solution.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/07. Format the Text/template.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/07. Format the Text/template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/08. Furniture/furniture.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/08. Furniture/solution.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/08. Furniture/template.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS-Front-End/4.2 DOM and Events - Exercise/08. Furniture/template.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +103,7 @@
       <workItem from="1690289960088" duration="12000" />
       <workItem from="1690317294012" duration="42000" />
       <workItem from="1690355004442" duration="5040000" />
-      <workItem from="1690452231176" duration="2127000" />
+      <workItem from="1690452231176" duration="2594000" />
     </task>
     <servers />
   </component>
