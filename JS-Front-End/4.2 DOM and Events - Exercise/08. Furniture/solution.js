@@ -1,100 +1,69 @@
 function solve() {
-    const formatButton = document.querySelector("#exercise button");
-    formatButton.addEventListener("click", parseFurnitureInput);
 
-    const buyButton = document.querySelector("#exercise button:nth-of-type(2)");
-    buyButton.addEventListener("click", buySelectedFurniture);
+    let [generateBtn, buyBtn] = Array.from(document.querySelectorAll("button"));
+    // Избираме всички бутони на страницата правим ги на масив и ги деструктурираме на отделни бутони
+    generateBtn.addEventListener("click", generate);  // Закачаме слушател на бутона
+    buyBtn.addEventListener("click", buy);            // Закачаме слушател на бутона
 
-    Array.from(document.querySelectorAll('input[type="checkbox"]')).forEach(
-        (checkbox) => checkbox.removeAttribute("disabled")
-    );
-}
+    function generate(event) {
+        let input = JSON.parse(document.querySelector("textarea").value);   // Взимаме инпута от полето и го парсваме към обект
+        input.forEach((furniture) => {                                      // За всяка подадена мебел
 
-function buySelectedFurniture() {
-    const checkboxes = Array.from(
-        document.querySelectorAll('input[type="checkbox"]:checked')
-    );
-    const cart = checkboxes.map(mapCheckboxToObject).reduce(
-        (acc, curr) => {
-            acc.names.push(curr.name);
-            acc.price += curr.price;
-            acc.averageDecorationFactor += curr.decFactor / checkboxes.length;
+            let tr = document.createElement("tr");                            // Създаваме ред за мебела
 
-            return acc;
-        },
-        {
-            names: [],
-            price: 0,
-            averageDecorationFactor: 0,
-        }
-    );
+            let td1 = document.createElement("td");                           // Създаваме колона 1
+            let img = document.createElement("img");                          // към колоната създаваме снимка
+            img.src = furniture.img;                                          // на снимката задаваме като стойност снимката на мебела
+            td1.appendChild(img);                                             // на колоната правим дете със снимката
+            tr.appendChild(td1);                                              // на реда правим дете със колона 1
 
-    const cartTextArea = document.querySelector(
-        "#exercise textarea:nth-of-type(2)"
-    );
-    cartTextArea.value = `
-    Bought furniture: ${cart.names.join(", ")}
-    Total price: ${cart.price.toFixed(2)}
-    Avg Dec Factor: ${cart.averageDecorationFactor.toFixed(2)}
-  `;
-}
+            let td2 = document.createElement("td");                             // Създаваме колона 2
+            let p2 = document.createElement("p");                               // към колоната създаваме параграф
+            p2.textContent = furniture.name;                                    // на параграфа задаваме като стойност името на мебела
+            td2.appendChild(p2);                                                // на колоната правим дете със параграфа
+            tr.appendChild(td2);                                                // на реда правим дете със колона 2
 
-function mapCheckboxToObject(checkbox) {
-    const row = checkbox.parentElement.parentElement;
-    const name = row.querySelector("td:nth-of-type(2)").innerText;
-    const price = Number(row.querySelector("td:nth-of-type(3)").innerText);
-    const decFactor = Number(row.querySelector("td:nth-of-type(4)").innerText);
+            let td3 = document.createElement("td");                             // Създаваме колона 3
+            let p3 = document.createElement("p");                               // към колоната създаваме параграф
+            p3.textContent = Number(furniture.price);                           // на параграфа задаваме като стойност цената на мебела като число
+            td3.appendChild(p3);                                                // на колоната правим дете със параграфа
+            tr.appendChild(td3);                                                // на реда правим дете със колона 3
 
-    return { name, price, decFactor };
-}
+            let td4 = document.createElement("td");                               // Създаваме колона 4
+            let p4 = document.createElement("p");                                 // към колоната създаваме параграф
+            p4.textContent = Number(furniture.decFactor);                         // на параграфа задаваме като стойност фактора на мебела като число
+            td4.appendChild(p4);                                                  // на колоната правим дете със параграфа
+            tr.appendChild(td4);                                                  // на реда правим дете със колона 4
 
-function parseFurnitureInput() {
-    const input = JSON.parse(document.querySelector("#exercise textarea").value);
-    const tableBody = document.querySelector("tbody");
-    const cellCreator = createCellCreator();
+            let td5 = document.createElement("td");                                 // Създаваме колона 5
+            let input = document.createElement("input");                            // към колоната създаваме инпут
+            input.type = "checkbox";                                                // на инпута задаваме като пропърти checkbox
+            td5.appendChild(input);                                                 // на колоната правим дете със инпута
+            tr.appendChild(td5);                                                    // на реда правим дете със колона 5
 
-    input
-        .map(cellCreator.createFurnitureRow)
-        .forEach((row) => tableBody.appendChild(row));
-}
-
-function createCellCreator() {
-    function createImageCell(src) {
-        const imageCell = document.createElement("td");
-        const image = document.createElement("img");
-        image.src = src;
-        imageCell.appendChild(image);
-
-        return imageCell;
+            document.querySelector("tbody").appendChild(tr);                        // На тялото закачаме като дете всеки направен ред
+        });
     }
 
-    function createTextCell(text) {
-        const cell = document.createElement("td");
-        cell.textContent = text;
+    function buy(event) {
+        let checkboxes = Array.from(document.querySelectorAll("tbody input")).filter((checkbox) => checkbox.checked);
+        // Намираме всички checkboxove правим ги на масив и ги филтрираме да останат само чекнатите
+        let boughtFurniture = [];       // Правим празен масив, в който ще пълним списъка с купените мебели
+        let totalPrice = 0;             // Правим брояч за цялата сума
+        let totalDecorationFactor = 0;  // правим брояч за декоративния фактор
 
-        return cell;
+        checkboxes.forEach((checkbox) => {                      // Минаваме по всеки един чекбокс от всички чекбоксове
+            let parent = checkbox.parentElement.parentElement;    // Качваме се нагоре по дървото 2 пъти до родителя
+            let data = Array.from(parent.querySelectorAll("p"));  // Данните за мебела са параграфите и ги правим на масив
+            boughtFurniture.push(data[0].textContent);            // към списъка добавяме, на нулев индекс е името на мебела
+            totalPrice += Number(data[1].textContent);            // към крайната цена добавяме, на първи индекс е цената на мебела
+            totalDecorationFactor += Number(data[2].textContent); // към декор фактора добавяме, на втори индекс е дек фактора на мебела
+        });
+
+        let output = document.querySelectorAll("textarea")[1];  // Намираме полето за изписване след бутон buy той е втория на страницата
+        output.textContent += `Bought furniture: ${boughtFurniture.join(", ")}\n`;  // Масива го джойнваме по запетая и интервал
+        output.textContent += `Total price: ${totalPrice.toFixed(2)}\n`;            // крайната цена я правим до втория знак
+        output.textContent += `Average decoration factor: ${totalDecorationFactor / checkboxes.length}`;
+        // събрания дек фактор го делим на отбелязаните чекбоксовете за средно аритметичния
     }
-
-    function createCheckboxCell() {
-        const checkCell = document.createElement("td");
-        const checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
-        checkCell.appendChild(checkbox);
-
-        return checkCell;
-    }
-
-    return {
-        createFurnitureRow(furniture) {
-            const row = document.createElement("tr");
-
-            row.appendChild(createImageCell(furniture.img));
-            row.appendChild(createTextCell(furniture.name));
-            row.appendChild(createTextCell(furniture.price));
-            row.appendChild(createTextCell(furniture.decFactor));
-            row.appendChild(createCheckboxCell());
-
-            return row;
-        },
-    };
 }
